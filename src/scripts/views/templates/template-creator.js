@@ -1,7 +1,6 @@
 import CONFIG from '../../globals/config';
 
-const createDetailTemplate = (restaurant) => 
-`
+const createDetailTemplate = (restaurant) => `
   <img class="resto__poster" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
   <div class="resto__info">
   <center>
@@ -9,12 +8,12 @@ const createDetailTemplate = (restaurant) =>
     
     <div>
     ${restaurant.categories
-      .map(
-        (category) => `
+    .map(
+      (category) => `
           <span class="category">${category.name}</span>
         `,
-      )
-      .join('')}
+    )
+    .join('')}
     </div>
   </center>
   <h3 style="color: red; text-decoration: underline"">Information</h3>
@@ -36,12 +35,12 @@ const createDetailTemplate = (restaurant) =>
       <h4>Food</h4>
       <ul>
       ${restaurant.menus.foods
-        .map(
-          (food) => `
+    .map(
+      (food) => `
             <li class="">${food.name}</li>
           `,
-        )
-        .join('')}
+    )
+    .join('')}
       </ul>
       </div>
       
@@ -49,12 +48,12 @@ const createDetailTemplate = (restaurant) =>
         <h4>Drink</h4>
         <ul>
         ${restaurant.menus.drinks
-          .map(
-            (drink) => `
+    .map(
+      (drink) => `
               <li class="">${drink.name}</li>
             `,
-          )
-          .join('')}
+    )
+    .join('')}
         </ul>
       </div>
   </div>

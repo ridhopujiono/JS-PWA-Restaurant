@@ -34,9 +34,11 @@ body {
 
 .app-bar .app-bar__menu button {
   background-color: transparent;
+  width: 45px;
+  height: 45px;
   border: none;
-  font-size: 18px;
-  padding: 8px;
+  font-size: 19.2px;
+  padding: 10px;
   cursor: pointer;
 }
 
@@ -86,12 +88,14 @@ main {
 
 .hero{
   background-image: url('../public/img/hero.jpg');
+  background-size: cover;
   height: 90vh;
   display: flex;
   justify-content: center;
   color: white;
   text-align: center;
   font-family: revert;
+  background-repeat: no-repeat;
 }
 .hero-content{
   align-self: center;
@@ -121,23 +125,9 @@ main {
   restos
 */
 
-.grid-resto {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin: 32px 0;
-}
-
 /*
   resto Item
 */
-
-.resto-item {
-  width: 24%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  overflow: hidden;
-}
 
 
 .resto-item__header {

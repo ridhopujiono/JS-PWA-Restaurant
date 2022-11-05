@@ -7,6 +7,7 @@ class TheRestaurant {
     const responseJson = await response.json();
     return responseJson.restaurants;
   }
+
   static async favResto() {
     const response = FavoriteResto.getAllResto();
     return response;
@@ -17,7 +18,7 @@ class TheRestaurant {
   static async detailRestaurant(id) {
     const response = await fetch(API_ENDPOINT.DETAIL(id));
     const responseJson = await response.json();
-    console.log(responseJson)
+    console.log(responseJson);
     return (responseJson.restaurant);
   }
 }
