@@ -1,5 +1,5 @@
 {
-  "name": "movie-catalogue-lite",
+  "name": "restaurant-catalogue-lite",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "serve": "http-server dist --port 9000"
   },
   "keywords": [],
-  "author": "your_name <your_email@gmail.com>",
+  "author": "adrifsl <your_email@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.18.5",

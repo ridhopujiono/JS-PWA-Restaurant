@@ -10,7 +10,7 @@ const Home = {
           <h5 style="margin-bottom: 10px">Lets Find ur Restaurant</h5>
           <a href="#here" style="background: white;
           color: red;
-          padding: 5px 20px;
+          padding: 11px 26px;
           width: 45px;
           text-decoration: none;
           font-size: 16px;
