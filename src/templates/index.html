@@ -29,7 +29,9 @@
     <!-- <a class="skip-to-content-link" id="skip-link" href="#mainContent">
       Skip to content
     </a> -->
-    <a class="skip-to-content-link" id="skip-link" href=""> Skip to content </a>
+    <a class="skip-to-content-link" id="skip-link" href="#mainContent">
+      Skip to content
+    </a>
     <header class="app-bar">
       <div class="app-bar__menu">
         <button id="hamburgerButton">☰</button>
@@ -47,20 +49,11 @@
         </ul>
       </nav>
     </header>
-    <main id="mainContent"></main>
+    <main id="mainContent" tabindex="0"></main>
     <footer>
       <center>
         <p>Created with love adrifsl</p>
       </center>
     </footer>
   </body>
-
-  <script>
-    document.querySelector("#skip-link").addEventListener("click", function () {
-      var oh = location.hash;
-      var now = (location.hash = oh + "#mainContent");
-      document.querySelector("#skip-link").setAttribute("href", now);
-    });
-    // void 0;
-  </script>
 </html>
