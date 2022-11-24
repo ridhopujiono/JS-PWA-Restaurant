@@ -17,11 +17,19 @@
       src="https://use.fontawesome.com/b070c8f1df.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
 
     <title>Restaurant Catalogue</title>
   </head>
   <body>
-    <a class="skip-to-content-link" href="#here"> Skip to content </a>
+    <!-- <a class="skip-to-content-link" id="skip-link" href="#mainContent">
+      Skip to content
+    </a> -->
+    <a class="skip-to-content-link" id="skip-link" href=""> Skip to content </a>
     <header class="app-bar">
       <div class="app-bar__menu">
         <button id="hamburgerButton">☰</button>
@@ -46,4 +54,13 @@
       </center>
     </footer>
   </body>
+
+  <script>
+    document.querySelector("#skip-link").addEventListener("click", function () {
+      var oh = location.hash;
+      var now = (location.hash = oh + "#mainContent");
+      document.querySelector("#skip-link").setAttribute("href", now);
+    });
+    // void 0;
+  </script>
 </html>

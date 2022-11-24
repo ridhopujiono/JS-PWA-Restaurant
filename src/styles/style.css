@@ -171,6 +171,8 @@ main {
 }
 
 .resto-item .resto-item__content h3 a {
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: #db0000;
   text-decoration: none;
 }
@@ -219,6 +221,8 @@ footer p {
 }
 
 footer p a {
+  padding-top: 10px;
+  padding-bottom: 10px;
   color: #db0000;
   text-decoration: none;
 }
@@ -268,3 +272,4 @@ footer p a {
 .skip-to-content-link:focus {
   transform: translateY(0%);
 }
+#mainContent:focus {outline: 0;}
