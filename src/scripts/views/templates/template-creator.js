@@ -1,7 +1,7 @@
 import CONFIG from '../../globals/config';
 
 const createDetailTemplate = (restaurant) => `
-  <img class="resto__poster" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
+  <img class="resto__poster" src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="${restaurant.name}" />
   <div class="resto__info">
   <center>
     <h1>${restaurant.name}</h1>
@@ -88,7 +88,7 @@ const createItemTemplate = (restaurant) => `
 <a href="/#/detail/${restaurant.id}">
     <div class="resto-item__header">
       <img class="resto-item__header__poster" alt="${restaurant.name}"
-           src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
+           src="${ (typeof restaurant.pictureId === "undefined" || !restaurant.pictureId) ?  'https://picsum.photos/id/666/800/450?grayscale' : CONFIG.BASE_IMAGE_URL + restaurant.pictureId }">
       <div class="resto-item__header__rating">
         <p>⭐️<span class="resto-item__header__rating__score">${restaurant.rating}</span></p>
       </div>
@@ -101,7 +101,6 @@ const createItemTemplate = (restaurant) => `
     </a>
   </div>
 `;
-
 const createLikeButtonTemplate = () => `
   <button aria-label="like this movie" id="likeButton" class="like">
     <i class="fa fa-heart-o" aria-hidden="true"></i>
